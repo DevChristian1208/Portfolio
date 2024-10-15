@@ -1,0 +1,74 @@
+<section class="contact-section" id="contact">
+  <div class="contactHeadline">
+    <h2 data-key="contactTitle">Contact me</h2>
+    <img class="arrowDown" src="./assets/Arrow.png">
+  </div>
+  <div class="contactDetails">
+    <div class="contactInfoText">
+      <p data-key="contactIntro">
+        Still not sure if I am the right person for your project? Contact me so I can reassure you. Let us work together.
+      </p>
+    </div>
+    <div class="contact-info">
+      <div class="info-item">
+        <div class="emailInfoDiv">
+          <img class="icon" src="./assets/Vector (2).png">
+          <p>E-mail: christian.pressig&#64;web.de</p>
+        </div>
+        <div class="phoneNumberInfoDiv">
+          <img class="icon" src="./assets/🦆 icon _phone_.png">
+          <p>Tel: 0175 6453064</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Formular-Tag -->
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
+    <div class="contact-formtop">
+      <div class="form-left">
+        <input [(ngModel)]="contactData.name" name="name" id="name" type="text" placeholder="Your Name" data-key="contactNamePlaceholder" required>
+        <input [(ngModel)]="contactData.email" name="email" id="email" type="email" placeholder="Your Email" data-key="contactEmailPlaceholder" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+      </div>
+      <div class="form-right">
+        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your Message" data-key="contactMessagePlaceholder" required></textarea>
+        @if (!message.valid && message.touched){
+          <span>Please enter a message</span>
+        } 
+      </div>
+    </div>
+    <div class="contact-formbottom">
+      <div class="checkbox-wrapper">
+        <input class="custom-checkbox" type="checkbox" id="privacy-checkbox" required>
+        <label for="privacy-checkbox" data-key="privacyPolicy">
+          I've read the <span class="privacy-policy" data-key="privacyPolicyLink">privacy policy</span> and agree to the processing of my data as outlined.
+        </label>
+      </div>
+      <div class="submitButtonDiv">
+        <button class="submitButton" type="submit" data-key="contactSubmit">Send</button>
+      </div>
+
+      <!--Responsive-->
+      <div class="info-item responsive">
+        <div class="emailInfoDiv">
+          <img class="icon" src="./assets/Vector (2).png">
+          <p>E-mail: christian.pressig&#64;web.de</p>
+        </div>
+        <div class="phoneNumberInfoDiv">
+          <img class="icon" src="./assets/🦆 icon _phone_.png">
+          <p>Tel: 0175 6453064</p>
+        </div>
+        <div class="iconDivResponsive">
+          <a href="https://github.com/DevChristian1208" target="_blank">
+            <img src="./assets/Github button.png" alt="GitHub">
+          </a>
+          <a href="mailto:christian.pressig@web.de">
+            <img src="./assets/Email button.png" alt="Email">
+          </a>
+          <a href="https://www.linkedin.com/in/christian-seidel-091718320/" target="_blank">
+            <img src="./assets/Linkedin button.png" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>

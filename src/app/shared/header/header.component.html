@@ -1,0 +1,34 @@
+<!--Header Main Div-->
+<div class="headerMainDiv">
+    <div class="headerLeft">
+        <h2><a href="#landing-page">&#60;CS&#62;</a></h2>
+        <div class="headerLinks">
+            <a href="#why-me">Why me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    
+    <div class="language-switch">
+        <span class="lang-option" (click)="setLanguage('de')">DE</span>
+        <span>|</span>
+        <span class="lang-option" (click)="setLanguage('en')">EN</span>
+    </div> 
+
+    <img src="./assets/burger menu.png" class="burger-menu" alt="Menu Icon" (click)="openMenu()">
+
+    <div class="mobile-menu" [class.active]="menuOpen">
+        <span class="close-btn" (click)="closeMenu()">&times;</span>
+        <a href="#why-me" (click)="closeMenu()">Why me</a>
+        <a href="#skills" (click)="closeMenu()">Skills</a>
+        <a href="#projects" (click)="closeMenu()">Projects</a>
+        <a href="#contact" (click)="closeMenu()">Contact</a>
+
+        <div class="language-switch mobile-lang-switch">
+            <span class="lang-option" (click)="setLanguage('de')">DE</span>
+            <span>|</span>
+            <span class="lang-option" (click)="setLanguage('en')">EN</span>
+        </div>
+    </div>
+</div>

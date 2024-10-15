@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<!-- Hauptkomponenten nur anzeigen, wenn es nicht die Imprint-Seite ist -->
+<div *ngIf="!isImprintPage">
+  <app-landing-page></app-landing-page>
+  <app-whyme></app-whyme>
+  <app-myskills></app-myskills>
+  <app-myprojects></app-myprojects>
+  <app-contactme></app-contactme>
+</div>
+
+<!-- Hier wird der Inhalt über den Router geladen -->
+<router-outlet></router-outlet>
+
+<!-- Footer nur anzeigen, wenn es nicht die Imprint-Seite ist -->
+<app-footer *ngIf="!isImprintPage"></app-footer>

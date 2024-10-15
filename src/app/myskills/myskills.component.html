@@ -1,0 +1,19 @@
+<div class="skills-container" id="skills">
+  <h2 class="skills-title" data-key="skillsTitle">My Skills</h2> 
+  <div class="skills-grid">
+    <div *ngFor="let skill of skills" class="skill-item">
+      <img [src]="skill"  class="skill-icon"/>
+    </div>
+  </div>
+  <div class="arrowDivResponsiveDiv">
+    <img src="./assets/Arrow 6.png">
+  </div>
+  <div class="text-section">
+    <p data-key="skillsText">
+      I am always happy to learn new technologie, just tell me what you need.
+    </p>
+  </div>
+  <div class="buttonDiv">
+      <button class="cta-button" data-key="contactButton" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Let's talk</button> <!-- Call-to-Action Button -->
+  </div>
+</div>

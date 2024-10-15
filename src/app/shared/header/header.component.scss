@@ -1,0 +1,142 @@
+$bg-gradient: linear-gradient(180deg, #0D0D23, #000066);
+$text-color: #FF5544;
+$hover-color: #69F4BE;
+$font-family: 'Courier New', Courier, monospace;
+$transition-ease: 200ms ease;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+.headerMainDiv {
+    background-color: #0D0D23;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: $text-color;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.headerLinks {
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+
+    a {
+        font-family: $font-family;
+        text-decoration: none;
+        color: $text-color;
+        transition: color $transition-ease;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    @media (max-width: 850px) {
+        display: none;
+    }
+}
+
+.language-switch {
+    font-size: 16px;
+    color: $text-color;
+    font-family: $font-family;
+    cursor: pointer;
+
+    @media (max-width: 850px) {
+        display: none;
+    }
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: $text-color;
+    font-size: 20px;
+    cursor: pointer;
+
+    @media (max-width: 850px){
+        font-size: 20px;
+    }
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    height: 30px;
+
+    @media (max-width: 850px) {
+        display: block;
+    }
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 70vh;
+    background: $bg-gradient;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
+    font-family: $font-family;
+
+    &.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    a {
+        color: $text-color;
+        font-size: 24px;
+        margin: 20px 0;
+        text-decoration: none;
+
+        &:hover{
+            color: $hover-color;
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 36px;
+        color: $text-color;
+        cursor: pointer;
+
+        &:hover{
+            color:$hover-color;
+        }
+    }
+
+    .mobile-lang-switch {
+        font-size: 18px;
+        margin-top: 30px;
+        color: $text-color;
+        display: block;
+
+        &:hover{
+            color:$hover-color;
+        }
+    }
+}

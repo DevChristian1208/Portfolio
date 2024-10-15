@@ -1,0 +1,300 @@
+$font-colororange: #F2545B;
+$font-colorblue: #00FFC6;
+
+.contact-section {
+  padding: 50px;
+  text-align: left;
+  color: $font-colorblue;
+  padding-top:65px;
+
+  @media(max-width:950px){
+    padding-top:75px;
+  }
+
+  .contactHeadline {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+      color: $font-colororange;
+      font-size: 48px;
+    }
+
+    .arrowDown {
+      height: 30px;
+      padding-left: 20px;
+
+      @media(max-width: 768px) {
+        display: none;
+
+        
+      }
+    }
+  }
+
+  .contactDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 30px;
+
+    .contactInfoText {
+      width: 50%;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .contact-info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      align-items: flex-start;
+      justify-content: center;
+
+      @media(max-width: 768px) {
+        display: none;
+      }
+
+      .info-item {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+
+        .emailInfoDiv,
+        .phoneNumberInfoDiv {
+          display: flex;
+          align-items: center;
+
+          .icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: $font-colorblue;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    .contact-formtop {
+      display: flex;
+      align-items: stretch;
+      gap: 20px;
+
+      .form-left,
+      .form-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+
+        input,
+        textarea {
+          background-color: #0A0322;
+          border: 2px solid $font-colorblue;
+          color: #B3FFAB;
+          padding: 15px;
+          font-size: 16px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          outline: none;
+          height: 50px;
+        }
+
+        textarea {
+          height: 150px;
+          resize: none;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+          color: $font-colorblue;
+        }
+      }
+    }
+
+    .contact-formbottom {
+      display: flex;
+      flex-direction: column;
+
+      .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+
+        @media(max-width: 768px) {
+          justify-content: center;
+        }
+
+        .custom-checkbox {
+          appearance: none;
+          width: 14px;
+          height: 14px;
+          border: 2px solid red;
+          background-color: transparent;
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+
+          &:checked {
+            background-color: $font-colorblue;
+          }
+
+          &:checked::after {
+            content: '✔';
+            color: white;
+            font-size: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        label {
+          font-size: 14px;
+          color: #B3FFAB;
+
+          @media(max-width: 768px) {
+            text-align: center;
+          }
+
+          @media(max-width:614px){
+            padding-top:15px;
+          }
+
+          .privacy-policy {
+            color: $font-colororange;
+          }
+        }
+      }
+
+      .submitButtonDiv {
+        display: flex;
+        justify-content: end;
+
+        @media(max-width: 768px) {
+          justify-content: center;
+          margin-top: 15px;
+        }
+
+        .submitButton {
+          background-color: transparent;
+          border: 2px solid $font-colorblue;
+          color: $font-colororange;
+          padding: 10px 30px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: $font-colorblue;
+          }
+
+          &:active,
+          &:focus {
+            border-color: $font-colororange;
+            color: $font-colororange;
+          }
+        }
+      }
+
+      .info-item.responsive {
+        display: none;
+
+        @media(max-width: 768px) {
+          display: block;
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .emailInfoDiv,
+          .phoneNumberInfoDiv {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .icon {
+              font-size: 24px;
+              margin-right: 10px;
+              color: $font-colorblue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .contactDetails {
+      flex-direction: column;
+
+      .contactInfoText,
+      .contact-info {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .contact-formtop {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .submitButtonDiv {
+      justify-content: center;
+    }
+
+    .contactHeadline {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+    padding-top: 80px;
+
+    .contactHeadline h2 {
+      font-size: 36px;
+    }
+
+    .contact-formtop input,
+    .contact-formtop textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .submitButton {
+      font-size: 14px;
+      padding: 8px 20px;
+    }
+  }
+
+  .iconDivResponsive {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+
+    img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      transition: all 100ms ease;
+
+      &:hover {
+        filter: drop-shadow(0 0 10px #FF6347);
+      }
+    }
+  }
+}

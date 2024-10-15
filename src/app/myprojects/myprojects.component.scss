@@ -1,0 +1,151 @@
+$color-orange: #FF6347;
+$color-blue: #66FFCC;
+
+.myProjectsHeadlineDiv {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-top:30px;
+
+  .myProjectsHeadline {
+    color: $color-orange;
+    font-size: 45px;
+  }
+
+  @media(max-width:950px){
+    margin:0;
+    padding-top: 40px;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+  width: 100%;
+
+  .project-item {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+
+    @media(max-width: 950px) {
+      flex-direction: column;
+    }
+
+    &.reverse {
+      flex-direction: row-reverse;
+
+      @media(max-width: 950px) {
+        flex-direction: column;
+      }
+    }
+
+    .project-image {
+      width: 50%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      @media(max-width: 950px) {
+        width: 75%;
+      }
+    }
+
+    .project-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      width: 50%;
+
+      @media(max-width: 950px) {
+        text-align: center;
+        width: 100%;
+      }
+
+      .project-title {
+        font-size: 24px;
+        color: $color-blue;
+        margin: 0 0 10px;
+
+        @media(max-width: 950px) {
+          font-size: 28px;
+        }
+      }
+
+      .project-technologies {
+        font-size: 16px;
+        color: $color-blue;
+        margin: 0 0 10px;
+
+        @media(max-width: 950px) {
+          font-size: 18px;
+        }
+      }
+
+      .project-description {
+        font-size: 14px;
+        color: $color-blue;
+        margin-bottom: 20px;
+
+        @media(max-width: 950px) {
+          font-size: 16px;
+        }
+      }
+
+      .project-links {
+        display: flex;
+        gap: 25px;
+        justify-content: flex-start;
+
+        @media(max-width: 950px) {
+          justify-content: center;
+        }
+
+        .project-link {
+          padding: 10px 40px;
+          border: 2px solid $color-blue;
+          color: $color-orange;
+          font-family: monospace;
+          text-decoration: none;
+          font-size: 15px;
+          transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            background-color: transparent;
+            color: $color-blue;
+            border-color: $color-blue;
+          }
+
+          &.live-test {
+            background-color: $color-blue;
+            color: black;
+            border-color: transparent;
+
+            &:hover {
+              color: $color-orange; 
+              background-color: $color-blue; 
+            }
+          }
+
+          @media(max-width: 950px) {
+            font-size: 16px;
+          }
+
+          @media(max-width:380px){
+            padding: 5px 40px;
+          }
+        }
+      }
+    }
+  }
+}
