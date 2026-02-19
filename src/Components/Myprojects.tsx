@@ -35,7 +35,7 @@ const SKILLS: Skill[] = [
   {
     name: "Next.js",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-    desc: "Next.js ist ein modernes Web-Framework, das schnelle Ladezeiten, Suchmaschinenoptimierung (SEO) und perfekte Struktur für professionelle Webprojects bietet.",
+    desc: "Next.js ist ein modernes Web-Framework, das schnelle Ladezeiten, Suchmaschinenoptimierung (SEO) und perfekte Struktur für professionelle Webprojekte bietet.",
   },
   {
     name: "TypeScript",
@@ -45,7 +45,7 @@ const SKILLS: Skill[] = [
   {
     name: "Firebase",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg",
-    desc: "Mit Firebase kann ich Webanwendungen z. B. mit Login-Systemen, Datenbanken und Hosting ausstatten – ohne eigenen Server oder komplizierte Einrichtung.",
+    desc: "Firebase ermöglicht die Integration von Echtzeit-Datenbanken und sicheren Login-Systemen. So kann ich komplexe Cloud-Funktionen effizient umsetzen, ohne die Performance der App zu beeinträchtigen.",
   },
 ];
 
