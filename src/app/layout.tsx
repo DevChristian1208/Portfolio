@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Christian Seidel",
   description:
-    "Christian Seidel – selbstständiger Front-End Webentwickler. Kundenportfolio, Projekte und Leistungen im modernen Webdesign & Development.",
+    "Christian Seidel – Frontend Webentwickler",
   icons: {
     icon: "/favicon.png",
   },
