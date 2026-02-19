@@ -35,7 +35,7 @@ const SKILLS: Skill[] = [
   {
     name: "Next.js",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-    desc: "Next.js ist ein modernes Web-Framework, das schnelle Ladezeiten, Suchmaschinenoptimierung (SEO) und perfekte Struktur für professionelle Webprojekte bietet.",
+    desc: "Next.js ist ein modernes Web-Framework, das schnelle Ladezeiten, Suchmaschinenoptimierung (SEO) und perfekte Struktur für professionelle Webprojects bietet.",
   },
   {
     name: "TypeScript",
@@ -83,39 +83,24 @@ function clampModulo(n: number, max: number) {
 function useBodyScrollLock(locked: boolean) {
   useEffect(() => {
     if (!locked) return;
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
 
-    const html = document.documentElement;
-    const body = document.body;
-    const scrollY = window.scrollY;
-    body.dataset.scrollY = String(scrollY);
-
-    const scrollbarWidth = window.innerWidth - html.clientWidth;
+    document.body.style.overflow = "hidden";
     if (scrollbarWidth > 0) {
-      body.style.paddingRight = `${scrollbarWidth}px`;
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
 
-    body.style.position = "fixed";
-    body.style.top = `-${scrollY}px`;
-    body.style.width = "100%";
-    body.style.overflow = "hidden";
-
     return () => {
-      const y = Number(body.dataset.scrollY || 0);
-
-      body.style.position = "";
-      body.style.top = "";
-      body.style.width = "";
-      body.style.overflow = "";
-      body.style.paddingRight = "";
-      delete body.dataset.scrollY;
-      window.scrollTo({ top: y, behavior: "auto" });
+      document.body.style.overflow = originalStyle;
+      document.body.style.paddingRight = "0px";
     };
   }, [locked]);
 }
 
 export default function MyProjects() {
   const [activeSkillIdx, setActiveSkillIdx] = useState<number | null>(null);
-
   const [slideIdx, setSlideIdx] = useState<number[]>(() =>
     PROJECTS.map(() => 0)
   );
@@ -214,7 +199,6 @@ export default function MyProjects() {
                         </div>
                       ))}
                     </div>
-                    <span className="pointer-events-none absolute inset-y-0 -left-[55%] w-[55%] -skew-x-12 bg-gradient-to-r from-white/0 via-white/50 to-white/0 opacity-0 transition duration-700 group-hover/card:left-[115%] group-hover/card:opacity-100" />
                   </div>
 
                   {hasSlider && (
@@ -225,8 +209,7 @@ export default function MyProjects() {
                             e.stopPropagation();
                             goPrev(pIdx);
                           }}
-                          className="p-2 rounded-full bg-white/95 shadow-xl text-slate-800 opacity-0 group-hover/slider:opacity-100 transition-opacity hover:bg-rose-50 pointer-events-auto"
-                          aria-label="Vorheriges Bild"
+                          className="p-2 rounded-full bg-white/95 shadow-xl text-slate-800 opacity-100 md:opacity-0 md:group-hover/slider:opacity-100 transition-opacity hover:bg-rose-50 pointer-events-auto"
                         >
                           <ChevronLeft size={24} />
                         </button>
@@ -237,24 +220,10 @@ export default function MyProjects() {
                             e.stopPropagation();
                             goNext(pIdx);
                           }}
-                          className="p-2 rounded-full bg-white/95 shadow-xl text-slate-800 opacity-0 group-hover/slider:opacity-100 transition-opacity hover:bg-rose-50 pointer-events-auto"
-                          aria-label="Nächstes Bild"
+                          className="p-2 rounded-full bg-white/95 shadow-xl text-slate-800 opacity-100 md:opacity-0 md:group-hover/slider:opacity-100 transition-opacity hover:bg-rose-50 pointer-events-auto"
                         >
                           <ChevronRight size={24} />
                         </button>
-                      </div>
-
-                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-[100]">
-                        {project.images.map((_, dotIdx) => (
-                          <div
-                            key={dotIdx}
-                            className={`h-1.5 rounded-full transition-all ${
-                              current === dotIdx
-                                ? "bg-rose-500 w-4"
-                                : "bg-slate-300 w-1.5"
-                            }`}
-                          />
-                        ))}
                       </div>
                     </>
                   )}
@@ -268,22 +237,19 @@ export default function MyProjects() {
                       {project.stack}
                     </p>
                   </header>
-
                   <p className="mt-4 text-slate-700">{project.desc}</p>
-
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Link
                       href={project.github}
                       target="_blank"
-                      className="inline-flex items-center gap-2 rounded-xl border border-slate-300/90 bg-white px-4 py-2 text-sm text-slate-800 shadow-sm transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:shadow-xl hover:border-slate-400 hover:-translate-y-1 active:scale-95"
+                      className="inline-flex items-center gap-2 rounded-xl border border-slate-300/90 bg-white px-4 py-2 text-sm text-slate-800 shadow-sm transition-all duration-700 hover:shadow-xl hover:border-slate-400 hover:-translate-y-1 active:scale-95"
                     >
                       GitHub
                     </Link>
-
                     <Link
                       href={project.demo}
                       target="_blank"
-                      className="relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-rose-500 to-indigo-600 px-5 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:shadow-[0_20px_40px_-10px_rgba(79,70,229,0.4)] hover:-translate-y-1 active:scale-95"
+                      className="relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-rose-500 to-indigo-600 px-5 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-700 hover:shadow-indigo-500/40 hover:-translate-y-1 active:scale-95"
                     >
                       Live Demo
                     </Link>
@@ -311,9 +277,7 @@ export default function MyProjects() {
               onClick={() => setActiveSkillIdx(idx)}
               className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white/85 p-4 text-center shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="absolute inset-0 rounded-2xl bg-[conic-gradient(from_180deg,rgba(99,102,241,.18),rgba(236,72,153,.18),rgba(56,189,248,.18),rgba(99,102,241,.18))] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="relative mx-auto grid place-items-center size-16 rounded-xl bg-slate-50 ring-1 ring-slate-200">
+              <div className="mx-auto grid place-items-center size-16 rounded-xl bg-slate-50 ring-1 ring-slate-200">
                 <img src={s.img} alt={s.name} className="h-10 w-10" />
               </div>
               <p className="relative mt-2 text-sm font-medium">{s.name}</p>
@@ -325,8 +289,6 @@ export default function MyProjects() {
         activeSkill &&
         createPortal(
           <div
-            role="dialog"
-            aria-modal="true"
             className="fixed inset-0 z-[9999] grid place-items-center bg-black/40 px-4 backdrop-blur-sm"
             onClick={() => setActiveSkillIdx(null)}
           >
@@ -340,7 +302,7 @@ export default function MyProjects() {
                   alt={activeSkill.name}
                   className="h-12 w-12"
                 />
-                <div>
+                <div className="flex-1">
                   <h3 className="text-xl font-semibold text-slate-900">
                     {activeSkill.name}
                   </h3>
@@ -350,8 +312,7 @@ export default function MyProjects() {
                 </div>
                 <button
                   onClick={() => setActiveSkillIdx(null)}
-                  className="ml-auto rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-800"
-                  aria-label="Modal schließen"
+                  className="ml-auto rounded-lg p-2 text-slate-500 hover:bg-slate-100"
                 >
                   <X />
                 </button>
