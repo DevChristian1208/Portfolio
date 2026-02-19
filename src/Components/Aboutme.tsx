@@ -39,7 +39,6 @@ const Aboutme = ({ myname }: AboutmeProps) => {
             </figure>
           </div>
 
-          {/* Text */}
           <div className="order-1 lg:order-2 lg:col-span-7">
             <span className="text-sm font-semibold tracking-wide text-rose-500">
               Über mich
