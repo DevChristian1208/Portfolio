@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#2f2f2f] text-white py-10 px-4">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="text-2xl font-mono font-bold text-[#ea4343]">
+        <div className="text-2xl font-mono font-black tracking-tight text-gradient-bold">
           &lt;CS&gt;
         </div>
 
@@ -20,7 +20,7 @@ const Footer = () => {
             <li>
               <Link
                 href="/impressum"
-                className="hover:text-[#ea4343] transition"
+                className="hover:text-indigo-400 transition"
               >
                 Impressum
               </Link>
@@ -28,7 +28,7 @@ const Footer = () => {
             <li>
               <Link
                 href="/datenschutz"
-                className="hover:text-[#ea4343] transition"
+                className="hover:text-indigo-400 transition"
               >
                 Privacy policy
               </Link>
@@ -41,14 +41,14 @@ const Footer = () => {
             <img
               src="/Email button.png"
               alt="Email"
-              className="w-6 h-6 cursor-pointer transition-all duration-100 hover:drop-shadow-[0_0_10px_#FF6347]"
+              className="w-6 h-6 cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_#6366f1]"
             />
           </a>
           <a href="https://github.com/DevChristian1208" target="_blank">
             <img
               src="/Github button.png"
               alt="GitHub"
-              className="w-6 h-6 cursor-pointer transition-all duration-100 hover:drop-shadow-[0_0_10px_#FF6347]"
+              className="w-6 h-6 cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_#22d3ee]"
             />
           </a>
           <a
@@ -59,7 +59,7 @@ const Footer = () => {
             <img
               src="/Linkedin button.png"
               alt="LinkedIn"
-              className="w-6 h-6 cursor-pointer transition-all duration-100 hover:drop-shadow-[0_0_10px_#FF6347]"
+              className="w-6 h-6 cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_#22d3ee]"
             />
           </a>
         </div>

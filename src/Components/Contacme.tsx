@@ -44,14 +44,19 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative isolate bg-[#2e2e48] text-white py-24 px-4"
+      className="relative isolate overflow-hidden bg-[#2e2e48] text-white py-24 px-4"
     >
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute top-[-10%] left-[-10%] h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle,rgba(99,102,241,.28),transparent_70%)] blur-3xl animate-aurora" />
+        <div className="absolute bottom-[-15%] right-[-10%] h-[26rem] w-[26rem] rounded-full bg-[radial-gradient(circle,rgba(34,211,238,.22),transparent_70%)] blur-3xl animate-aurora-reverse" />
+      </div>
+
       {successMessage && (
         <div className="fixed bottom-16 left-0 w-full flex justify-center px-4 z-50">
           <div
             className={`transition-opacity duration-500 w-[80%] ${
               visible ? "opacity-100" : "opacity-0"
-            } bg-[#ea4343] text-white p-4 rounded-md shadow-lg text-center`}
+            } bg-gradient-to-r from-indigo-500 to-cyan-500 text-white p-4 rounded-md shadow-lg text-center`}
           >
             {successMessage}
           </div>
@@ -60,10 +65,12 @@ export default function Contact() {
 
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <span className="text-[#ea4343] font-semibold uppercase text-sm block mb-2">
+          <span className="text-indigo-400 font-bold uppercase tracking-widest text-sm block mb-2">
             Get in Touch
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold">Contact me</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-gradient-bold">
+            Contact me
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -75,7 +82,9 @@ export default function Contact() {
 
             <ul className="space-y-6">
               <li className="flex items-start gap-4">
-                <Image src="/call.svg" alt="call" width={32} height={32} />
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 ring-1 ring-white/10">
+                  <Image src="/call.svg" alt="call" width={22} height={22} />
+                </div>
                 <div>
                   <span className="block text-sm text-gray-400">Call me</span>
                   <h3 className="text-lg font-bold">+49 1756453064</h3>
@@ -83,13 +92,15 @@ export default function Contact() {
               </li>
 
               <li className="flex items-start gap-4">
-                <Image src="/message.svg" alt="email" width={32} height={32} />
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 ring-1 ring-white/10">
+                  <Image src="/message.svg" alt="email" width={22} height={22} />
+                </div>
                 <div>
                   <span className="block text-sm text-gray-400">Email</span>
                   <h3 className="text-lg font-bold">
                     <a
                       href="mailto:christian.pressig@web.de"
-                      className="hover:text-[#ea4343] transition-all duration-200"
+                      className="hover:text-indigo-400 transition-all duration-200"
                     >
                       christian.pressig@web.de
                     </a>
@@ -105,7 +116,7 @@ export default function Contact() {
                 name="name"
                 type="text"
                 placeholder="Your Name"
-                className="bg-[#2f2f2f] p-4 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ea4343]"
+                className="bg-[#2f2f2f]/80 p-4 rounded-lg text-white placeholder-gray-400 ring-1 ring-white/10 transition-shadow focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
 
@@ -113,7 +124,7 @@ export default function Contact() {
                 name="email"
                 type="email"
                 placeholder="Your Email"
-                className="bg-[#2f2f2f] p-4 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ea4343]"
+                className="bg-[#2f2f2f]/80 p-4 rounded-lg text-white placeholder-gray-400 ring-1 ring-white/10 transition-shadow focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
 
@@ -121,7 +132,7 @@ export default function Contact() {
                 name="phone"
                 type="tel"
                 placeholder="Your Phone"
-                className="bg-[#2f2f2f] p-4 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ea4343] md:col-span-2"
+                className="bg-[#2f2f2f]/80 p-4 rounded-lg text-white placeholder-gray-400 ring-1 ring-white/10 transition-shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 md:col-span-2"
               />
             </div>
 
@@ -129,13 +140,13 @@ export default function Contact() {
               name="message"
               placeholder="Your message here"
               rows={5}
-              className="w-full bg-[#2f2f2f] p-4 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ea4343]"
+              className="w-full bg-[#2f2f2f]/80 p-4 rounded-lg text-white placeholder-gray-400 ring-1 ring-white/10 transition-shadow focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required
             />
 
             <button
               type="submit"
-              className="bg-[#ea4343] text-white font-bold px-6 py-3 rounded-md hover:bg-transparent hover:text-white border border-[#ea4343] transition-all flex items-center gap-2"
+              className="bg-gradient-to-r from-indigo-500 to-cyan-500 bg-[length:200%_100%] bg-left hover:bg-right text-white font-bold px-6 py-3 rounded-md shadow-[0_10px_30px_-8px_rgba(99,102,241,0.6)] transition-all duration-500 hover:shadow-[0_14px_40px_-6px_rgba(99,102,241,0.75)] hover:-translate-y-0.5 flex items-center gap-2"
             >
               Absenden
               <Image src="/send.svg" alt="send" width={18} height={18} />

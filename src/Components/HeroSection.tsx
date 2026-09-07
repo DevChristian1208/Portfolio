@@ -33,8 +33,9 @@ const HeroSection = () => {
         </h1>
 
         <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute top-24 left-[-18%] h-[36rem] w-[36rem] rounded-full bg-[radial-gradient(circle,rgba(244,63,94,.35),transparent_70%)] blur-3xl" />
-          <div className="absolute bottom-0 right-[-18%] h-[34rem] w-[34rem] rounded-full bg-[radial-gradient(circle,rgba(99,102,241,.4),transparent_70%)] blur-3xl" />
+          <div className="absolute top-24 left-[-18%] h-[36rem] w-[36rem] rounded-full bg-[radial-gradient(circle,rgba(99,102,241,.45),transparent_70%)] blur-3xl animate-aurora" />
+          <div className="absolute bottom-0 right-[-18%] h-[34rem] w-[34rem] rounded-full bg-[radial-gradient(circle,rgba(34,211,238,.5),transparent_70%)] blur-3xl animate-aurora-reverse" />
+          <div className="absolute top-1/3 right-[10%] h-[22rem] w-[22rem] rounded-full bg-[radial-gradient(circle,rgba(34,211,238,.35),transparent_70%)] blur-3xl animate-float" />
         </div>
 
         <div
@@ -69,11 +70,11 @@ const HeroSection = () => {
               "lg:col-span-6 lg:col-start-7 flex flex-col justify-center text-center lg:text-left space-y-4 transition-opacity duration-500",
             ].join(" ")}
           >
-            <h2 className="text-slate-300 text-lg sm:text-xl font-light">
+            <h2 className="text-slate-300 text-lg sm:text-xl font-light tracking-wide">
               Hallo, ich bin
             </h2>
 
-            <h2 className="text-rose-500 text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[0.95]">
+            <h2 className="text-gradient-static text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95]">
               Christian
             </h2>
 
@@ -87,7 +88,7 @@ const HeroSection = () => {
                   sentence="Frontend Developer"
                   manualMode
                   blurAmount={4}
-                  borderColor="rgb(244 63 94)"
+                  borderColor="rgb(99 102 241)"
                   animationDuration={2}
                   pauseBetweenAnimations={2}
                 />
@@ -98,11 +99,16 @@ const HeroSection = () => {
               <a
                 href="#contact"
                 className="
-                  bg-rose-500 hover:bg-rose-600
+                  relative overflow-hidden
+                  bg-gradient-to-r from-indigo-500 to-cyan-500
+                  bg-[length:200%_100%] bg-left hover:bg-right
                   text-white
                   px-7 py-3 rounded-lg
-                  font-semibold
-                  transition-colors
+                  font-bold
+                  shadow-[0_8px_30px_-6px_rgba(99,102,241,0.55)]
+                  transition-all duration-500
+                  hover:shadow-[0_12px_40px_-4px_rgba(99,102,241,0.75)]
+                  hover:-translate-y-0.5
                   flex items-center gap-2
                 "
               >
@@ -112,7 +118,7 @@ const HeroSection = () => {
 
               <a
                 href="#about"
-                className="text-slate-300 hover:text-rose-400 font-semibold transition-colors"
+                className="text-slate-300 hover:text-indigo-400 font-semibold transition-colors"
               >
                 About Me
               </a>

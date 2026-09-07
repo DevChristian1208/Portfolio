@@ -74,7 +74,8 @@ export default function Services() {
       className="relative isolate text-slate-800 bg-[linear-gradient(to_bottom,_#ffffff_0%,_#f7f9ff_65%,_#46466a_92%)]"
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[80%] -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,.07),transparent_45%),radial-gradient(circle_at_80%_60%,rgba(236,72,153,.06),transparent_45%)]" />
+        <div className="absolute -top-24 left-[8%] h-[30rem] w-[30rem] rounded-full bg-[radial-gradient(circle,rgba(34,211,238,.22),transparent_70%)] blur-3xl animate-aurora" />
+        <div className="absolute top-10 right-[5%] h-[26rem] w-[26rem] rounded-full bg-[radial-gradient(circle,rgba(99,102,241,.2),transparent_70%)] blur-3xl animate-aurora-reverse" />
         <div
           className="absolute inset-0 opacity-50 [mask-image:linear-gradient(to_bottom,white,transparent_85%)]"
           style={{
@@ -89,11 +90,11 @@ export default function Services() {
 
       <div className="container mx-auto px-4 py-24">
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-rose-500 font-semibold uppercase tracking-wider text-xs">
+          <span className="text-indigo-500 font-bold uppercase tracking-widest text-xs">
             Was ich anbiete
           </span>
 
-          <h2 className="mt-2 text-4xl md:text-5xl font-extrabold tracking-tight">
+          <h2 className="mt-2 text-4xl md:text-5xl font-black tracking-tight text-gradient-bold">
             Meine Pakete
           </h2>
 
@@ -117,12 +118,14 @@ export default function Services() {
               <div
                 key={t.id}
                 className={cx(
-                  "group relative rounded-3xl border bg-white/90 p-8 backdrop-blur shadow-[0_12px_30px_-10px_rgba(2,6,23,0.15)] transition hover:shadow-[0_22px_60px_-10px_rgba(2,6,23,0.20)]",
-                  hot ? "border-rose-200/90" : "border-slate-200/90"
+                  "group relative rounded-3xl border bg-white/90 p-8 backdrop-blur shadow-[0_12px_30px_-10px_rgba(2,6,23,0.15)] transition-all duration-500 hover:-translate-y-1.5",
+                  hot
+                    ? "border-indigo-200 shadow-[0_18px_45px_-12px_rgba(99,102,241,0.35)] hover:shadow-[0_26px_65px_-12px_rgba(99,102,241,0.5)] md:scale-[1.03]"
+                    : "border-slate-200/90 hover:shadow-[0_22px_60px_-10px_rgba(2,6,23,0.20)]"
                 )}
               >
                 {t.badge && (
-                  <div className="absolute -top-3 left-6 rounded-full bg-rose-500 px-3 py-1 text-xs font-semibold text-white shadow-md">
+                  <div className="absolute -top-3 left-6 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 px-3 py-1 text-xs font-bold text-white shadow-md">
                     {t.badge}
                   </div>
                 )}
@@ -130,12 +133,14 @@ export default function Services() {
                 <h3 className="text-xl font-bold">{t.name}</h3>
                 <p className="mt-2 text-sm text-slate-700">{t.description}</p>
 
-                <p className="mt-5 text-3xl font-extrabold">{t.price}</p>
+                <p className="mt-5 text-3xl font-black text-gradient-bold">
+                  {t.price}
+                </p>
 
                 <ul className="mt-6 space-y-3 text-sm">
                   {t.features.map((f, i) => (
                     <li key={`${t.id}-${i}`} className="flex gap-2">
-                      <span className="mt-1.5 inline-block size-2 rounded-full bg-gradient-to-r from-rose-500 to-indigo-600" />
+                      <span className="mt-1.5 inline-block size-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500" />
                       <span className="text-slate-800">{f}</span>
                     </li>
                   ))}
