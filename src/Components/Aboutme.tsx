@@ -67,7 +67,7 @@ const Aboutme = ({ myname }: AboutmeProps) => {
             </p>
 
             <p className="mt-4 sm:mt-5 text-[15.5px] leading-7 text-white/60 max-w-prose">
-              Ich entwickle moderne Weboberflächen mit React, Next.js und Tailwind CSS und interessiere mich zunehmend für die Systeme und Netzwerke, auf denen diese Anwendungen laufen. Primär suche ich eine Ausbildung zum Fachinformatiker für Systemintegration, bin aber auch offen für die Fachrichtung Anwendungsentwicklung oder einen direkten Quereinstieg, um mich fachlich weiterzuentwickeln und aktiv im Team an echten IT-Infrastrukturen
+              Ich entwickle moderne Weboberflächen mit React, Next.js und Tailwind CSS und interessiere mich zunehmend für die Systeme und Netzwerke, auf denen diese Anwendungen laufen. Primär suche ich eine Ausbildung zum Fachinformatiker für Systemintegration, bin aber auch offen für die Fachrichtung Anwendungsentwicklung oder einen direkten Quereinstieg, um mich fachlich weiterzuentwickeln und aktiv im Team an echten IT-Infrastrukturen und Anwendungen mitzuarbeiten.
             </p>
 
             <ul className="mt-6 space-y-3 text-[15.5px] text-white/85">
