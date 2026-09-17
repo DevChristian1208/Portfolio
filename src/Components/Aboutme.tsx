@@ -52,7 +52,6 @@ const Aboutme = ({ myname }: AboutmeProps) => {
             </figure>
           </div>
 
-          {/* Text */}
           <div className="order-1 lg:order-2 lg:col-span-7">
             <span className="font-mono text-sm font-bold uppercase tracking-widest text-cyan-400">
               {"// über mich"}
@@ -68,11 +67,7 @@ const Aboutme = ({ myname }: AboutmeProps) => {
             </p>
 
             <p className="mt-4 sm:mt-5 text-[15.5px] leading-7 text-white/60 max-w-prose">
-              Ich entwickle moderne, performante Weboberflächen mit React,
-              Next.js und Tailwind CSS. Mein Fokus liegt auf sauberem Code,
-              responsivem Design und einer guten User Experience. Aktuell suche
-              ich eine Junior-Position, in der ich mich fachlich
-              weiterentwickeln und aktiv im Team mitarbeiten kann.
+              Ich entwickle moderne Weboberflächen mit React, Next.js und Tailwind CSS und interessiere mich zunehmend für die Systeme und Netzwerke, auf denen diese Anwendungen laufen. Primär suche ich eine Ausbildung zum Fachinformatiker für Systemintegration, bin aber auch offen für die Fachrichtung Anwendungsentwicklung oder einen direkten Quereinstieg, um mich fachlich weiterzuentwickeln und aktiv im Team an echten IT-Infrastrukturen
             </p>
 
             <ul className="mt-6 space-y-3 text-[15.5px] text-white/85">
