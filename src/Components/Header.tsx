@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const menuItems = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
+  { href: "#home", label: "Start" },
+  { href: "#about", label: "Über mich" },
   { href: "#portfolio", label: "Portfolio" },
-  { href: "#contact", label: "Contact" },
+  { href: "#contact", label: "Kontakt" },
 ];
 
 const Header = () => {

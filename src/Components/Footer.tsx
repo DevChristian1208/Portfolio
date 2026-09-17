@@ -30,7 +30,7 @@ const Footer = () => {
                 href="/datenschutz"
                 className="hover:text-indigo-400 transition"
               >
-                Privacy policy
+                Datenschutz
               </Link>
             </li>
           </ul>

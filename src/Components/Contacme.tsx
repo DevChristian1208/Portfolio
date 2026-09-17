@@ -66,10 +66,10 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-indigo-400 font-bold uppercase tracking-widest text-sm block mb-2">
-            Get in Touch
+            Kontakt
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-gradient-bold">
-            Contact me
+            Kontaktiere mich
           </h2>
         </div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
                   <Image src="/call.svg" alt="call" width={22} height={22} />
                 </div>
                 <div>
-                  <span className="block text-sm text-gray-400">Call me</span>
+                  <span className="block text-sm text-gray-400">Anrufen</span>
                   <h3 className="text-lg font-bold">+49 1756453064</h3>
                 </div>
               </li>
@@ -96,7 +96,7 @@ export default function Contact() {
                   <Image src="/message.svg" alt="email" width={22} height={22} />
                 </div>
                 <div>
-                  <span className="block text-sm text-gray-400">Email</span>
+                  <span className="block text-sm text-gray-400">E-Mail</span>
                   <h3 className="text-lg font-bold">
                     <a
                       href="mailto:christian.pressig@web.de"
@@ -115,7 +115,7 @@ export default function Contact() {
               <input
                 name="name"
                 type="text"
-                placeholder="Your Name"
+                placeholder="Dein Name"
                 className="bg-[#2f2f2f]/80 p-4 rounded-lg text-white placeholder-gray-400 ring-1 ring-white/10 transition-shadow focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
@@ -123,7 +123,7 @@ export default function Contact() {
               <input
                 name="email"
                 type="email"
-                placeholder="Your Email"
+                placeholder="Deine E-Mail"
                 className="bg-[#2f2f2f]/80 p-4 rounded-lg text-white placeholder-gray-400 ring-1 ring-white/10 transition-shadow focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
@@ -131,14 +131,14 @@ export default function Contact() {
               <input
                 name="phone"
                 type="tel"
-                placeholder="Your Phone"
+                placeholder="Deine Telefonnummer"
                 className="bg-[#2f2f2f]/80 p-4 rounded-lg text-white placeholder-gray-400 ring-1 ring-white/10 transition-shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 md:col-span-2"
               />
             </div>
 
             <textarea
               name="message"
-              placeholder="Your message here"
+              placeholder="Deine Nachricht"
               rows={5}
               className="w-full bg-[#2f2f2f]/80 p-4 rounded-lg text-white placeholder-gray-400 ring-1 ring-white/10 transition-shadow focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required

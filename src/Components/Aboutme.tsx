@@ -108,7 +108,7 @@ const Aboutme = ({ myname }: AboutmeProps) => {
 
             <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
-                href="#projects"
+                href="#portfolio"
                 className="inline-flex justify-center items-center rounded-xl bg-gradient-to-r from-indigo-500 to-cyan-500 bg-[length:200%_100%] bg-left hover:bg-right px-5 py-3 text-white text-sm font-bold shadow-[0_8px_24px_-8px_rgba(99,102,241,0.5)] transition-all duration-500 hover:shadow-[0_12px_30px_-6px_rgba(99,102,241,0.65)] hover:-translate-y-0.5 w-full sm:w-auto"
               >
                 Projekte ansehen

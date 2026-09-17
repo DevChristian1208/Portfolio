@@ -112,7 +112,7 @@ const HeroSection = () => {
                   flex items-center gap-2
                 "
               >
-                Say Hello
+                Sag Hallo
                 <Image src="/message.svg" alt="" width={16} height={16} />
               </a>
 
@@ -120,7 +120,7 @@ const HeroSection = () => {
                 href="#about"
                 className="text-slate-300 hover:text-indigo-400 font-semibold transition-colors"
               >
-                About Me
+                Über mich
               </a>
             </div>
 

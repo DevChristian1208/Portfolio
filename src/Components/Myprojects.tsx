@@ -30,7 +30,7 @@ const SKILLS: Skill[] = [
   {
     name: "JavaScript",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    desc: "JavaScript sorgt für Interaktivität – zum Beispiel klickbare Menüs, dynamische Inhalte oder Formulare mit Echtzeit-Feedback. Damit wird Ihre Seite lebendig.",
+    desc: "JavaScript sorgt für Interaktivität – zum Beispiel klickbare Menüs, dynamische Inhalte oder Formulare mit Echtzeit-Feedback. Damit wird eine Seite lebendig.",
   },
   {
     name: "Next.js",
@@ -40,12 +40,12 @@ const SKILLS: Skill[] = [
   {
     name: "TypeScript",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-    desc: "TypeScript macht den Code zuverlässiger und besser wartbar. Damit entstehen langfristig stabile und sichere Anwendungen für Ihre Anforderungen.",
+    desc: "TypeScript macht den Code zuverlässiger und besser wartbar. Damit lassen sich langfristig stabile und sichere Anwendungen entwickeln.",
   },
   {
     name: "Firebase",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg",
-    desc: "Mit Firebase kann ich Webanwendungen z. B. mit Login-Systemen, Datenbanken und Hosting ausstatten – ohne eigenen Server oder komplizierte Einrichtung.",
+    desc: "Mit Firebase realisiere ich Backend-Funktionen wie Login-Systeme, Datenbanken und Hosting – ohne eigenen Server oder komplizierte Einrichtung.",
   },
 ];
 
@@ -280,8 +280,8 @@ export default function MyProjects() {
             Meine Fähigkeiten
           </h2>
           <p className="mt-3 text-slate-700">
-            Technologien, mit denen ich Ihre individuellen Anforderungen
-            professionell umsetze.
+            Technologien, mit denen ich moderne Webanwendungen professionell
+            umsetze.
           </p>
         </div>
 

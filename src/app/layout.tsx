@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Christian Seidel",
   description:
-    "Christian Seidel – selbstständiger Front-End Webentwickler. Kundenportfolio, Projekte und Leistungen im modernen Webdesign & Development.",
+    "Christian Seidel – Junior Frontend Entwickler mit Fokus auf React & Next.js. Portfolio mit Projekten und Fähigkeiten für den Einstieg in die Webentwicklung.",
   icons: {
     icon: "/favicon.png",
   },
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
