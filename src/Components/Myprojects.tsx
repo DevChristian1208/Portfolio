@@ -167,10 +167,7 @@ export default function MyProjects() {
             Meine Projekte
           </h2>
           <p className="mt-3 text-slate-700">
-            Die folgenden Projekte sind während meiner Weiterbildung entstanden.
-            Sie geben Einblick in meine Fähigkeiten und verdeutlichen, wie meine
-            Leidenschaft für Webentwicklung meinen Weg als Entwickler geprägt
-            hat.
+           Die folgenden Projekte sind während meiner Weiterbildung entstanden und wurden von mir seitdem eigenständig weiterentwickelt und ausgebaut. Sie geben Einblick in meine Fähigkeiten und verdeutlichen, wie meine Leidenschaft für Webentwicklung meinen Weg als Entwickler geprägt hat.
           </p>
         </div>
 
