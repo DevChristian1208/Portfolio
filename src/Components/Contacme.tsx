@@ -76,8 +76,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-6 text-gray-300">
             <p>
-              Interesse an einer Zusammenarbeit oder einer Junior-Position im
-              Frontend? Ich freue mich über eine Kontaktaufnahme.
+              Ich freue mich über Ihre Kontaktaufnahme.
             </p>
 
             <ul className="space-y-6">
