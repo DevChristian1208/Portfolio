@@ -54,7 +54,7 @@ const PROJECTS: Project[] = [
     title: "Cryptflow",
     images: ["crypt2.png", "crypt3.png", "crypt4.png"],
     stack: "Next.js | React | TypeScript | Tailwind CSS | Firebase",
-    desc: "Eine selbst entwickelte, Slack/Discord-ähnliche Kommunikationsplattform mit Fokus auf echte, kompromisslose Sicherheit statt reinem Funktionsumfang. Alle Nachrichten sind Ende-zu-Ende verschlüsselt (AES-256-GCM, ECDH P-256) – Direktnachrichten mit echter Forward Secrecy nahe an Signal-Niveau, Channels über Envelope Encryption.",
+    desc: "Eine selbst entwickelte, Slack/Discord-ähnliche Kommunikationsplattform mit Fokus auf echte Sicherheit statt nur Feature-Umfang. Alle Nachrichten sind Ende-zu-Ende verschlüsselt (AES-256-GCM, ECDH P-256): Direktnachrichten mit echter Forward Secrecy durch Hash-Ratchet und periodisches Rekeying, Channels über Envelope Encryption.",
     github: "https://github.com/DevChristian1208/KryptFlow-Repo",
     demo: "https://kryptflow.christianseidel-developer.de/",
   },
