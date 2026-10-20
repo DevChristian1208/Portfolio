@@ -51,17 +51,6 @@ const Footer = () => {
               className="w-6 h-6 cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_#22d3ee]"
             />
           </a>
-          <a
-            href="https://de.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/Linkedin button.png"
-              alt="LinkedIn"
-              className="w-6 h-6 cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_#22d3ee]"
-            />
-          </a>
         </div>
       </div>
     </footer>
