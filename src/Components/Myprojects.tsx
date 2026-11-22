@@ -167,9 +167,9 @@ export default function MyProjects() {
             Meine Projekte
           </h2>
           <p className="mt-3 text-slate-700">
-            Die folgenden Projekte sind während meiner Weiterbildung entstanden
-            und wurden von Anfang an KI-gestützt entwickelt, unter anderem mit
-            Claude Code. Ich lege fest, was gebaut wird, prüfe und teste die
+            Die folgenden Projekte sind während meiner Weiterbildung entstanden.
+            Entwickelt habe ich sie mit Unterstützung von KI-Tools wie Claude
+            Code. Ich lege fest, was gebaut wird, prüfe und teste die
             Ergebnisse, übernehme die Fehlersuche und bringe die Projekte
             selbst online.
           </p>
