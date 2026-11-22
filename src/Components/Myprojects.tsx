@@ -25,17 +25,17 @@ const SKILLS: Skill[] = [
   {
     name: "CSS",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-    desc: "Mit CSS gestalte ich das Aussehen von Webseiten – also Farben, Schriftarten, Abstände und Animationen. Es macht die Seite ansprechend und benutzerfreundlich.",
+    desc: "Mit CSS gestalte ich das Aussehen von Webseiten, also Farben, Schriftarten, Abstände und Animationen. So wird eine Seite ansprechend und benutzerfreundlich.",
   },
   {
     name: "JavaScript",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    desc: "JavaScript sorgt für Interaktivität – zum Beispiel klickbare Menüs, dynamische Inhalte oder Formulare mit Echtzeit-Feedback. Damit wird eine Seite lebendig.",
+    desc: "JavaScript sorgt für Interaktivität, zum Beispiel für klickbare Menüs, dynamische Inhalte oder Formulare mit Echtzeit-Feedback. Damit wird eine Seite lebendig.",
   },
   {
     name: "Next.js",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-    desc: "Next.js ist ein modernes Web-Framework, das schnelle Ladezeiten, Suchmaschinenoptimierung (SEO) und perfekte Struktur für professionelle Webprojects bietet.",
+    desc: "Next.js ist ein modernes Web-Framework auf Basis von React. Es sorgt für schnelle Ladezeiten, gute Suchmaschinenoptimierung (SEO) und eine klare Projektstruktur.",
   },
   {
     name: "TypeScript",
@@ -45,31 +45,31 @@ const SKILLS: Skill[] = [
   {
     name: "Firebase",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg",
-    desc: "Mit Firebase realisiere ich Backend-Funktionen wie Login-Systeme, Datenbanken und Hosting – ohne eigenen Server oder komplizierte Einrichtung.",
+    desc: "Mit Firebase setze ich Backend-Funktionen wie Login-Systeme und Datenbanken um, ohne eigenen Server oder komplizierte Einrichtung.",
   },
 ];
 
 const PROJECTS: Project[] = [
   {
     title: "Cryptflow",
-    images: ["crypt2.png", "crypt3.png", "crypt4.png"],
+    images: ["/crypt2.png", "/crypt3.png", "/crypt4.png"],
     stack: "Next.js | React | TypeScript | Tailwind CSS | Firebase",
-    desc: "Slack/Discord-ähnliche Kommunikationsplattform mit Ende-zu-Ende-Verschlüsselung. Das Grundgerüst der App habe ich selbst entwickelt, die Sicherheits- und Verschlüsselungsschicht mit Claude Code umgesetzt: AES-256-GCM, Schlüsselaustausch per ECDH (P-256), Forward Secrecy in Direktnachrichten durch Hash-Ratchet und periodisches Rekeying, Envelope Encryption für Channels. Ein Lernprojekt, kein unabhängig geprüftes Sicherheitsprodukt.",
+    desc: "Slack/Discord-ähnliche Kommunikationsplattform mit Ende-zu-Ende-Verschlüsselung: AES-256-GCM, Schlüsselaustausch per ECDH (P-256), Forward Secrecy in Direktnachrichten durch Hash-Ratchet und periodisches Rekeying, Envelope Encryption für Channels. Ein Lernprojekt, kein unabhängig geprüftes Sicherheitsprodukt.",
     github: "https://github.com/DevChristian1208/KryptFlow-Repo",
     demo: "https://kryptflow.christianseidel-developer.de/",
   },
   {
     title: "TaskFlow",
     images: [
-      "Task1.png",
-      "Task2.png",
-      "Task3.png",
-      "Task4.png",
-      "Task5.png",
-      "Task6.png",
+      "/Task1.png",
+      "/Task2.png",
+      "/Task3.png",
+      "/Task4.png",
+      "/Task5.png",
+      "/Task6.png",
     ],
-    stack: "Next.JS | React | Tailwind | Firebase",
-    desc: "TaskFlow ist eine moderne Aufgaben- und Team-Management-App. Sie kombiniert To-Do-Listen, Board-Workflow (Kanban) und Contact-/Team-Verwaltung in einer Oberfläche.",
+    stack: "Next.js | React | Tailwind CSS | Firebase",
+    desc: "Aufgaben- und Team-Management-App, die To-Do-Listen, ein Kanban-Board sowie Kontakt- und Teamverwaltung in einer Oberfläche verbindet.",
     github: "https://github.com/DevChristian1208/TaskFlow",
     demo: "https://taskflow.christianseidel-developer.de/Login",
   },
@@ -167,7 +167,11 @@ export default function MyProjects() {
             Meine Projekte
           </h2>
           <p className="mt-3 text-slate-700">
-           Die folgenden Projekte sind während meiner Weiterbildung entstanden und wurden von mir seitdem eigenständig weiterentwickelt und ausgebaut. 
+            Die folgenden Projekte sind während meiner Weiterbildung entstanden
+            und wurden von Anfang an KI-gestützt entwickelt, unter anderem mit
+            Claude Code. Ich lege fest, was gebaut wird, prüfe und teste die
+            Ergebnisse, übernehme die Fehlersuche und bringe die Projekte
+            selbst online.
           </p>
         </div>
 
@@ -252,6 +256,7 @@ export default function MyProjects() {
                     <Link
                       href={project.github}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-xl border border-slate-300/90 bg-white px-4 py-2 text-sm text-slate-800 shadow-sm transition-all duration-700 hover:shadow-xl hover:border-slate-400 hover:-translate-y-1 active:scale-95"
                     >
                       GitHub
@@ -260,6 +265,7 @@ export default function MyProjects() {
                       <Link
                         href={project.demo}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-cyan-500 bg-[length:200%_100%] bg-left hover:bg-right px-5 py-2 text-sm font-bold text-white shadow-lg transition-all duration-700 hover:shadow-indigo-500/40 hover:-translate-y-1 active:scale-95"
                       >
                         Live Demo
@@ -277,8 +283,7 @@ export default function MyProjects() {
             Meine Fähigkeiten
           </h2>
           <p className="mt-3 text-slate-700">
-            Technologien, mit denen ich moderne Webanwendungen professionell
-            umsetze.
+            Technologien, mit denen ich bisher gearbeitet habe.
           </p>
         </div>
 
