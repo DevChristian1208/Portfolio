@@ -167,11 +167,7 @@ export default function MyProjects() {
             Meine Projekte
           </h2>
           <p className="mt-3 text-slate-700">
-            Die folgenden Projekte sind während meiner Weiterbildung entstanden.
-            Entwickelt habe ich sie mit Unterstützung von KI-Tools wie Claude
-            Code. Ich lege fest, was gebaut wird, prüfe und teste die
-            Ergebnisse, übernehme die Fehlersuche und bringe die Projekte
-            selbst online.
+              Diese Projekte sind in meiner Weiterbildung entstanden und wachsen seitdem weiter: Ich baue neue Features ein, überarbeite das Design und verbessere Details. Was gebaut wird, entscheide ich selbst. Ich teste, suche Fehler und bringe alles selbst online. Als Hilfsmittel nutze ich dabei unter anderem KI-Tools.
           </p>
         </div>
 
