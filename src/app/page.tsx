@@ -8,8 +8,6 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Christian Seidel | Webentwicklung",
-  description:
-    "Moderne, schnelle Websites für kleine Unternehmen. Webentwicklung mit Next.js – aus Hof, deutschlandweit.",
 };
 
 export default function Home() {
